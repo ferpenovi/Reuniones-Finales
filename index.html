@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronograma de Reuniones</title>
+  
+  <!-- Enlace a jQuery (debe ir primero) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Enlace a Moment.js (debe ir antes de FullCalendar) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  
+  <!-- Enlace al archivo CSS de FullCalendar 3.2.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.css">
+  
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    #calendar {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cronograma de Reuniones</h1>
+    
+    <!-- Formulario para ingresar datos -->
+    <form id="eventForm">
+      <label>Fecha:</label>
+      <input type="date" id="fecha" required><br>
+      
+      <label>Hora:</label>
+      <input type="time" id="hora" min="08:00" max="17:00" required><br>
+      
+      <label>Alumno:</label>
+      <input type="text" id="alumno" required><br>
+      
+      <label>Escuela:</label>
+      <input type="text" id="escuela" required><br>
+      
+      <label>Docente:</label>
+      <input type="text" id="docente" required><br>
+      
+      <button type="submit">Agregar al Cronograma</button>
+    </form>
+    
+    <!-- Contenedor del calendario -->
+    <div id="calendar"></div>
+  </div>
+
+  <!-- Enlace al archivo JavaScript de FullCalendar 3.2.0 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.js"></script>
+  
+  <!-- Tu archivo JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
